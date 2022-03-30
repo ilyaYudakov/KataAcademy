@@ -1,8 +1,8 @@
-package String;
+package JavaCore;
 
 import java.math.BigInteger;
 
-public class Factorial {
+public class Factorial_2_4_13 {
 
     /**
      * 2.4.13

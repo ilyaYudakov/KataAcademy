@@ -1,21 +1,19 @@
-package String;
+package JavaCore;
 
 /**
  * 2.4.16
- * <p>
+ *
  * Напишите метод printOddNumbers, который принимает массив и выводит в консоль только нечетные числа из него, через запятую. Конец вывода должен перевести курсор на новую строку.
- * <p>
+ *
  * Пример ввода: [3,5,20,8,7,3,100]
- * <p>
+ *
  * Пример вывода: 3,5,7,3
- * <p>
- * <p>
- * <p>
+ *
  * Требования:
  * Сигнатура метода должна быть: printOddNumbers(int[] arr)
  */
 
-public class printOddNumbers {
+public class printOddNumbers_2_4_16 {
 
     public static void main(String[] args) {
 
