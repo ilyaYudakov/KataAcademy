@@ -31,8 +31,14 @@ public class FactorialRecursion {
 
     public static BigInteger factorial(int value) {
         //Твой код здесь
+        BigInteger result = BigInteger.ONE;
+        BigInteger fact = BigInteger.valueOf(value);
 
-        return value == 1 ? BigInteger.ONE : BigInteger.valueOf(value).multiply(factorial(value - 1));
+        if (value <= 1) {
+            return result;
+        } else {
+            return fact.multiply(factorial(value - 1));
+        }
     }
 }
 
