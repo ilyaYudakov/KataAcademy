@@ -66,9 +66,9 @@ public class Palindrom_2_3_10 {
                 "Are we not drawn onward, we few, drawn onward to new era?"
         };
 
-        for (int i = 0; i < phrases.length; i++) {
+        for (String phrase : phrases) {
 
-            System.out.println(isPalindrome(phrases[i]));
+            System.out.println(isPalindrome(phrase));
         }
     }
 

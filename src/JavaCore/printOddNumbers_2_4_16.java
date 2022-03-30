@@ -24,13 +24,13 @@ public class printOddNumbers_2_4_16 {
     public static void printOddNumbers(int[] arr) {
         StringBuilder sb = new StringBuilder();
         boolean first = true;
-        for (int x = 0; x < arr.length; x++) {
-            if (arr[x] % 2 != 0) {
+        for (int i : arr) {
+            if (i % 2 != 0) {
                 if (first) {
-                    sb.append(arr[x]);
+                    sb.append(i);
                     first = false;
                 } else {
-                    sb.append("," + arr[x]);
+                    sb.append(",").append(i);
                 }
             }
         }

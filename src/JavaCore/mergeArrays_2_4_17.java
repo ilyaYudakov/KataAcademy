@@ -1,5 +1,7 @@
 package JavaCore;
 
+import java.util.Arrays;
+
 /**
  *2.4.17
  *
@@ -21,7 +23,7 @@ public class mergeArrays_2_4_17 {
         int[] arr1 = {0, 2, 2};
         int[] arr2 = {1, 3};
 
-        System.out.println(mergeArrays(arr1, arr2));
+        System.out.println(Arrays.toString(mergeArrays(arr1, arr2)));
 
 
     }
