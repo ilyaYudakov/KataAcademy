@@ -1,5 +1,7 @@
 package JavaCore;
 
+import java.util.Objects;
+
 /**
  * 3.4.8
  *
@@ -24,7 +26,12 @@ package JavaCore;
 
 public class ComplexNumber_3_4_8 {
     public static void main(String[] args) {
+        ComplexNumber a = new ComplexNumber(1, 1);
+        ComplexNumber b = new ComplexNumber(1, 1);
 
+        System.out.println(a.equals(b));
+        System.out.println(a.hashCode());
+        System.out.println(b.hashCode());
     }
     public static class ComplexNumber {
         private double re;
@@ -46,6 +53,20 @@ public class ComplexNumber_3_4_8 {
             return im;
         }
 
-    }
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            ComplexNumber that = (ComplexNumber) o;
 
+            if (re != getRe()) return false;
+            if (im != getIm()) return false;
+            return true;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(re, im);
+        }
+    }
 }
