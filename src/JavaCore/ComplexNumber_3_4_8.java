@@ -4,14 +4,14 @@ import java.util.Objects;
 
 /**
  * 3.4.8
- *
+ * <p>
  * Дан класс ComplexNumber. Переопределите в нем методы equals() и hashCode() так, чтобы equals() сравнивал
  * экземпляры ComplexNumber по содержимому полей re и im, а hashCode() был бы согласованным с реализацией equals().
- *
+ * <p>
  * Реализация hashCode(), возвращающая константу или не учитывающая дробную часть re и im, засчитана не будет
- *
+ * <p>
  * Пример
- *
+ * <p>
  * ComplexNumber a = new ComplexNumber(1, 1);
  * ComplexNumber b = new ComplexNumber(1, 1);
  * // a.equals(b) must return true
@@ -21,7 +21,6 @@ import java.util.Objects;
  * генерировать equals() и hashCode(). Если вы воспользовались помощью IDE, то разберитесь, что было сгенерировано
  * и почему оно выглядит именно так. Когда вас на собеседовании попросят на бумажке реализовать equals() и hashCode()
  * для какого-нибудь простого класса, то среда разработки помочь не сможет.
- *
  */
 
 public class ComplexNumber_3_4_8 {
@@ -33,6 +32,7 @@ public class ComplexNumber_3_4_8 {
         System.out.println(a.hashCode());
         System.out.println(b.hashCode());
     }
+
     public static class ComplexNumber {
         private double re;
         private double im;
@@ -54,19 +54,26 @@ public class ComplexNumber_3_4_8 {
         }
 
         @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            ComplexNumber that = (ComplexNumber) o;
+        public boolean equals(Object obj) {
+            if (obj == null) return false;
+            if (getClass() != obj.getClass()) return false;
+            final ComplexNumber other = (ComplexNumber) obj;
 
-            if (re != getRe()) return false;
-            if (im != getIm()) return false;
+            if ((this.getRe() != other.getRe()) || (this.getIm() != other.getIm())) return false;
+
             return true;
         }
 
         @Override
         public int hashCode() {
-            return Objects.hash(re, im);
+
+            int result;
+            long temp;
+            temp = Double.doubleToLongBits(re);
+            result = (int) (temp ^ (temp >>> 32));
+            temp = Double.doubleToLongBits(im);
+            result = 31 * result + (int) (temp ^ (temp >>> 32));
+            return result;
         }
     }
 }
