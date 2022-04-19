@@ -1,4 +1,4 @@
-package JavaCore;
+package JavaCore.Modul3;
 
 /**
  * 3.5.6

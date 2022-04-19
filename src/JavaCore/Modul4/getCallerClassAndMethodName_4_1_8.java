@@ -1,4 +1,4 @@
-package JavaCore;
+package JavaCore.Modul4;
 
 public class getCallerClassAndMethodName_4_1_8 {
     public static void main(String[] args) {
@@ -13,10 +13,10 @@ public class getCallerClassAndMethodName_4_1_8 {
 
     public static String getCallerClassAndMethodName() {
         StackTraceElement[] ste = new Exception().getStackTrace();
-        if (ste.length < 3 ) {
+        if (ste.length < 3) {
             return null;
         } else {
-            return ste[2].getClassName()+"#"+ste[2].getMethodName();
+            return ste[2].getClassName() + "#" + ste[2].getMethodName();
         }
     }
 }

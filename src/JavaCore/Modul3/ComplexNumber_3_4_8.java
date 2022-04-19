@@ -1,4 +1,4 @@
-package JavaCore;
+package JavaCore.Modul3;
 
 import java.util.Objects;
 

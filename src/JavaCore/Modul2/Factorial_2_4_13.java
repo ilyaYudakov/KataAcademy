@@ -1,8 +1,8 @@
-package JavaCore;
+package JavaCore.Modul2;
 
 import java.math.BigInteger;
 
-public class FactorialRecursion_2_4_13 {
+public class Factorial_2_4_13 {
 
     /**
      * 2.4.13
@@ -22,6 +22,7 @@ public class FactorialRecursion_2_4_13 {
      * 1. Метод должен быть static.
      * 3. Передаваемый параметр должен иметь тип int.
      * 4. Метод должен быть реализован через цикл.
+     *
      */
 
     public static void main(String[] args) {
@@ -30,15 +31,11 @@ public class FactorialRecursion_2_4_13 {
     }
 
     public static BigInteger factorial(int value) {
-        //Твой код здесь
+    //Твой код здесь
         BigInteger result = BigInteger.ONE;
-        BigInteger fact = BigInteger.valueOf(value);
-
-        if (value <= 1) {
-            return result;
-        } else {
-            return fact.multiply(factorial(value - 1));
+        for (int i = 1; i <= value; i++) {
+            result = result.multiply(BigInteger.valueOf(i));
         }
+        return result;
     }
 }
-

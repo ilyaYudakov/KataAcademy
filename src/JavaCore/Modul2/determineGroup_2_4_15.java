@@ -1,4 +1,4 @@
-package JavaCore;
+package JavaCore.Modul2;
 
 /**
  * 2.4.15

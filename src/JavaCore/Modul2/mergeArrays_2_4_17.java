@@ -1,4 +1,4 @@
-package JavaCore;
+package JavaCore.Modul2;
 
 import java.util.Arrays;
 
